@@ -104,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="pointsLabel" destination="VXH-EJ-tbt" id="5yR-rE-7xS"/>
+                        <outlet property="roundsLabel" destination="bzx-ZO-em3" id="utQ-3C-b1f"/>
                         <outlet property="slider" destination="jel-et-q0a" id="6hL-Pe-RYT"/>
                         <outlet property="targetLabel" destination="EaE-OS-PaR" id="xdQ-Ed-Udo"/>
                     </connections>
