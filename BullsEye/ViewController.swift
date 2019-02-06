@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
     }
     
     @IBAction func showAlert() {
@@ -48,16 +48,23 @@ class ViewController: UIViewController {
         
         let message = "You scored \(points) points!"
         let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: {
+            action in
+            self.startNewRound()
+        })
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
-        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider){
         currentValue = Int(slider.value.rounded())
+    }
+    
+    @IBAction func startNewGame(){
+        score = 0
+        rounds = 0
+        startNewRound()
     }
     
     func startNewRound(){
